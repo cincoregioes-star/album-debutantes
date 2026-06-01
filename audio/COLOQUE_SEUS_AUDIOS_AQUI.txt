@@ -1,0 +1,7 @@
+Opcional:
+- page-turn.mp3
+- pack-open.mp3
+- click.mp3
+- bg.mp3
+
+O álbum funciona sem áudio.
