@@ -1,0 +1,9 @@
+Coloque aqui suas 36 imagens horizontais com estes nomes:
+
+01.jpg
+02.jpg
+03.jpg
+...
+36.jpg
+
+Também funcionam .png e .webp se você alterar a extensão no arquivo script.js.
