@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Jornada de Valentina | Álbum de Figurinhas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-box">
+        <p class="eyebrow">Álbum premium de 15 anos</p>
+        <h1>A Jornada de Valentina</h1>
+        <p class="subtitle">Nascimento: 12 de Julho de 2011</p>
+      </div>
+      <div class="progress-box">
+        <span id="progressText">0/36 coladas</span>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+    </header>
+
+    <main class="album-stage">
+      <button class="nav-btn left" id="prevBtn" aria-label="Página anterior">‹</button>
+      <section class="book" id="book"></section>
+      <button class="nav-btn right" id="nextBtn" aria-label="Próxima página">›</button>
+    </main>
+
+    <footer class="controls">
+      <button id="gameBtn">🎮 Jogar para ganhar figurinhas</button>
+      <button id="musicBtn" class="gold">🎵 Música</button>
+      <button id="pasteAllBtn" class="ghost">✨ Colar todas para apresentação</button>
+      <button id="resetBtn" class="ghost">Reiniciar álbum</button>
+      <span id="pageIndicator"></span>
+    </footer>
+  </div>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="viewer-inner">
+      <img id="viewerImg" class="viewer-img" alt="Figurinha ampliada" />
+      <div class="viewer-text">
+        <h2 id="viewerTitle"></h2>
+        <p id="viewerMeta" class="viewer-meta"></p>
+        <p id="viewerDesc" class="viewer-desc"></p>
+      </div>
+      <button class="viewer-back" id="closeViewer" aria-label="Voltar">↩ Voltar</button>
+    </div>
+  </div>
+
+  <div class="game-modal" id="gameModal" aria-hidden="true">
+    <div class="game-card game-card-full">
+      <button class="game-close" id="closeGame">×</button>
+      <div class="game-head game-head-compact">
+        <p class="eyebrow">Game oficial do álbum</p>
+        <h2>Álbum Game — Match 3</h2>
+        <p>Vença fases para ganhar pacotes com 4 figurinhas sem repetidas.</p>
+      </div>
+      <iframe id="gameFrame" class="game-frame" src="game/index.html" title="Game para ganhar figurinhas"></iframe>
+
+      <div class="game-hidden-controls" aria-hidden="true">
+        <span id="gamePhase"></span><span id="gameScore"></span><span id="gameTarget"></span>
+        <div id="gameBar"></div><div id="gemBoard"></div>
+        <button id="startPhaseBtn" type="button"></button><button id="nextPhaseBtn" type="button"></button>
+        <p id="gameMessage"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <audio id="pageSound" src="audio/page-turn.mp3" preload="auto"></audio>
+  <audio id="packSound" src="audio/pack-open.mp3" preload="auto"></audio>
+  <audio id="clickSound" src="audio/click.mp3" preload="auto"></audio>
+  <audio id="placeSound" src="audio/sticker-place.mp3" preload="auto"></audio>
+  <audio id="winSound" src="audio/vitoria.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="audio/bg-music.mp3" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
